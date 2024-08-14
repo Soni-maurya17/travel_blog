@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+
+
+
+{% block content %}
+<div class="container-fluid bg-primary-subtle " style="height:100vh; padding-left: 25%; padding-top: 20%;">
+    <h1>Authentication page</h1>
+    {% if user.is_authenticated %}
+    <h3>welcome {{user.username}}</h3>
+    <a href="{% url 'logout' %}" class="btn btn-outline-danger ">logout</a>
+    {% else %}
+    <a href="{% url 'register' %}">register</a>
+    <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
+</div>
+{% endblock content %}
+    
+  
+
+
+

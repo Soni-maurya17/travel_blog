@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+
+{% block content %}
+<div class="container-fluid bg-info-subtle vh-100 d-flex justify-content-center align-items-center">
+    <div class="card h-75 w-25">
+        <div class="header  w-100 bg-dark d-flex justify-content-center align-items-center fs-1 mb-5"
+            style=" height:10vh ; color:aliceblue">Register</div>
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="">Username:</label>
+            <input type="text" name="username" placeholder="enter user name" class="form-control">
+            <label for="">Email:</label>
+            <input type="Email" name="email" placeholder="enter your email" class="form-control">
+            <label for="">Password</label>
+            <input type="password" name="password" placeholder="enter password" class="form-control">
+            <label for="">Confirm Password</label>
+            <input type="password" name="cpassword" placeholder="enter password" class="form-control">
+            <button class=" ms-2 mt-4 " style="border-radius: 25px; ">Register</button>
+            <a href="{% url 'login' %}">login</a>
+
+        </form>
+    </div>
+</div>
+{% endblock content %}
+    
