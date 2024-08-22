@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class article(models.Model):
+class Article(models.Model):
     author = models.ForeignKey('auth.user', on_delete=models.CASCADE)
     title=models.CharField(max_length = 150)
     Content=models.TextField()

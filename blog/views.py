@@ -1,10 +1,14 @@
 from django.shortcuts import render,redirect
+from .models import Article
 
 # Create your views here.
 def blog_list_view(request):
     return render(
         request,
-        'blog_list.html'
+        'blog_list.html',
+        context={
+            'articles': Article.objects.all()
+        }
     )
     
 def article_view(request,id):
@@ -28,3 +32,5 @@ def add_article_view(request,id):
     
 def delete_article_view(request,id):
         return redirect('blog_list')
+def logout_view(request):
+        return redirect('index')

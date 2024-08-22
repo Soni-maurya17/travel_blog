@@ -29,6 +29,7 @@ urlpatterns = [
     path("login",main_views.login_view, name="login"),
     path("register",main_views.register_view, name="register"),
     path("logout",main_views.logout_view, name="logout"),
+    path("blog_list",blog_views.blog_list_view, name="blog_list"),
     #blog views
     path('blog/all',blog_views.blog_list_view,name='blog_list'),
     path('blog/<int:id>/article',blog_views.article_view,name='article'),
