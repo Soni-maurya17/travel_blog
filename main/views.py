@@ -3,6 +3,33 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 
 
+# def blog_list_view(request):
+#     return render(
+#         request,
+#         'blog_list.html',
+#         context={
+#             'articles' : Article.objects.all()
+#         }
+#     )
+    
+# def article_view(request,id):
+#     return render(
+#         request,
+#         'article.html',
+#         context={
+#             'article':Article.objects.get(id=id)
+#         }
+#     )
+# def edit_article_view(request,id):
+#     return render(
+#         request,
+#         'article.html',
+#         context={
+#             'article':Article.objects.get(id)
+#         }
+#     )
+
+
 # Create your views here.
 def index(request):
     return render(request,'index.html')
