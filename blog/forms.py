@@ -5,8 +5,7 @@ class ArticleForm(forms.ModelForm):
         model = Article
         fields = ['image', 'title', 'content']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),  
+            'title': forms.TextInput(attrs={'class': 'form-control'}),  
             'content': forms.Textarea(attrs={'class': 'form-control'}), 
             'image': forms.FileInput(attrs={'class': 'form-control'}),
         }
