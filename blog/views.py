@@ -47,7 +47,7 @@ def add_article_view(request):
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             article = form.save(commit=False)
-            article.author = request.User
+            article.author = request.user
             article.save()
             return redirect('blog_list')
     return render(
