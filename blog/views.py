@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import Article
+from .forms import ArticleForm
 # Create your views here.
-def blog_list_view(request):
- from .forms import ArticleForm
 
+    
 def blog_list_view(request):
-    return render(
+     return render(
         request,
         'blog_list.html',
         context={
@@ -22,6 +22,7 @@ def article_view(request, id):
         }
     )
     
+  
 def edit_article_view(request, id):
     article = Article.objects.get(id=id)        # Get the article
     form = ArticleForm(instance=article)        # create form with article
